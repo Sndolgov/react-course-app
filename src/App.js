@@ -1,5 +1,5 @@
-import CostItem from "./components/CostItem";
-import ExpensesList from "./components/ExpensesList"
+import PurchaseList from "./components/purchases/PurchaseList"
+import PurchaseCreator from "./components/creator/PurchaseCreator";
 
 function App() {
     const expenses = [
@@ -22,8 +22,8 @@ function App() {
 
     return (
         <div>
-            <h1>Let's start studying!</h1>
-            <ExpensesList expenses={expenses}/>
+            <PurchaseCreator />
+            <PurchaseList expenses={expenses}/>
         </div>
     );
 }
