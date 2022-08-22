@@ -1,6 +1,6 @@
 import "./PurchaseItem.css"
 import PurchaseDate from "./PurchaseDate";
-import Card from "../ui/Card";
+import Card from "../../ui/Card";
 import React, {useState} from "react"; //import only function useState note hole React
 
 
