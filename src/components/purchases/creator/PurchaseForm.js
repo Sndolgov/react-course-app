@@ -51,7 +51,7 @@ function PurchaseForm(props) {
         const formData = {
             name: name,
             cost: cost,
-            date: new Date(date )
+            date: new Date(date)
         }
 
         props.onCreatePurchase(formData)
@@ -59,14 +59,18 @@ function PurchaseForm(props) {
         setName('')
         setCost('')
         setDate('')
+
+        props.onButtonClick()
     }
+
 
     return (
         <form onSubmit={submitHandler}>
             <div className='new-cost__controls'>
                 <div className='new-cost__control'>
                     <label>Name</label>
-                    <input type='text' value={name} // attr value we use for cleaning input (in handler we wrote setName(''))
+                    <input type='text'
+                           value={name} // attr value we use for cleaning input (in handler we wrote setName(''))
                            onChange={nameChangeHandler}/>
                 </div>
                 <div className='new-cost__control'>
@@ -82,8 +86,12 @@ function PurchaseForm(props) {
                 <div className='new-cost__actions'>
                     <button type='submit'>Add purchase</button>
                 </div>
+                <div className='new-cost__actions'>
+                    <button onClick={props.onButtonClick}>Cancel</button>
+                </div>
             </div>
         </form>
+
     )
 }
 

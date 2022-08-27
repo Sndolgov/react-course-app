@@ -20,6 +20,12 @@ const INITIAL_EXPENSES = [
         date: new Date(2021, 7, 7),
         name: 'Cellphone',
         cost: 599.99
+    },
+    {
+        id: '3',
+        date: new Date(2022, 1, 7),
+        name: 'Cellphone',
+        cost: 599.99
     }
 ]
 
@@ -28,6 +34,7 @@ function App() {
     const [expenses, setExpenses] = useState(INITIAL_EXPENSES)
 
     const addPurchaseHandler = (purchaseData) => {
+
         setExpenses(prevExpenses => {
             return [...prevExpenses, purchaseData]
         })

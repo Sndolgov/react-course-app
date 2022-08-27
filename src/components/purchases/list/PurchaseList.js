@@ -3,6 +3,7 @@ import Card from "../../ui/Card";
 import PurchasesFilter from "../filter/PurchasesFilter";
 import React, {useState} from "react";
 import PurchaseListContent from "./PurchaseListContent";
+import ExpenseDiagram from "../diagram/ExpenseDiagram";
 
 
 const PurchaseList = (props) => {
@@ -11,6 +12,7 @@ const PurchaseList = (props) => {
 
     const yearChangeHandler = (newYearValue) => {
         setYear(newYearValue)
+        props.onYearChange(newYearValue)
         // console.log(newYearValue)
     };
 
@@ -32,6 +34,7 @@ const PurchaseList = (props) => {
     return (
             <Card className='purchases'>
                 <PurchasesFilter onChangeYear={yearChangeHandler} years={sortedUniqYears()} selectedYear={year}>
+                    <ExpenseDiagram expenses={filteredPurchasesByYear}/>
                     <PurchaseListContent purchases={filteredPurchasesByYear}/>
                 {/*{*/}
                 {/*        props.expenses.map(purchase => {*/}

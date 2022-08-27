@@ -22,3 +22,8 @@
     font-weight: bold;
     border-radius: 6px;
 }
+
+.purchases-filter option {
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+}

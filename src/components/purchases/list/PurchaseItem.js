@@ -13,14 +13,16 @@ function PurchaseItem(props) {
     }
 
     return (
-        <Card className='cost-item'>
-            <PurchaseDate date={props.date} />
-            <div className='cost-item__description'>
-                <h2>{name}</h2>
-                <div className='cost-item__price'>${props.cost}</div>
-            </div>
-            <button onClick={changeNameHandler}>Change name</button>
-        </Card>);
+        <li>
+            <Card className='cost-item'>
+                <PurchaseDate date={props.date}/>
+                <div className='cost-item__description'>
+                    <h2>{name}</h2>
+                    <div className='cost-item__price'>${props.cost}</div>
+                </div>
+                <button onClick={changeNameHandler}>Change name</button>
+            </Card>
+        </li>)
 }
 
 export default PurchaseItem
